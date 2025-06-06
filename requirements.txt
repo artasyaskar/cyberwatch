@@ -1,9 +1,2 @@
-
----
-
-### Step 2: `requirements.txt`
-
-```txt
-pytest
-schedule
-
+schedule     # For running periodic tasks (log scanning scheduler)
+pytest       # For running unit tests
