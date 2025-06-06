@@ -1,13 +1,12 @@
-from core.detector import ThreatDetector
 
-def test_detector_sql_injection():
-    lines = ["SELECT * FROM users WHERE username = 'admin'"]
+def test_detect_xss():
+    lines = ["<script>alert('hack');</script>"]
     d = ThreatDetector()
     result = d.scan_log(lines)
-    assert result[0]['threat'] == 'SQL Injection'
+    assert result[0]['threat'] == 'XSS Attempt'
 
-def test_detector_no_threat():
-    lines = ["User logged in successfully"]
+def test_path_traversal():
+    lines = ["GET /../../etc/passwd"]
     d = ThreatDetector()
     result = d.scan_log(lines)
-    assert result == []
+    assert result[0]['threat'] == 'Path Traversal'
