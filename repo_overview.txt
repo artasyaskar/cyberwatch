@@ -1,1 +1,10 @@
+CyberWatch Repository Overview
+
+Modules:
+- core: core logic for detecting threats, parsing logs, scheduling
+- utils: reusable functions for hashing, file I/O, and logging
+- interface: CLI frontend to interact with the engine
+- tests: test cases for core logic components
+
+Total .py files: 13
 
