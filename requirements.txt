@@ -1,1 +1,9 @@
 
+---
+
+### Step 2: `requirements.txt`
+
+```txt
+pytest
+schedule
+
