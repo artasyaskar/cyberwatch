@@ -1,4 +1,4 @@
-mport tempfile
+import tempfile
 from core.parser import parse_log_file
 
 def test_parser_skips_blank_lines():
